@@ -5,12 +5,12 @@ const cors=require("cors")
 require("dotenv").config();
 
 const app=express();
-const coroption={
-    origin:"http://localhost:3000",
-    methods:["GET","POST","PUT","DELETE"],
-    credentials:true,
+// const coroption={
+//     origin:"http://localhost:3000",
+//     methods:["GET","POST","PUT","DELETE"],
+//     credentials:true,
 
-}
+// }
 
 
 
