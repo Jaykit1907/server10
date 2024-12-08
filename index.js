@@ -54,15 +54,6 @@ app.post("/sendmail",(req,res)=>{
         }
         else{
            
-           res.send(`
-            <html>
-            <body>
-            <script>
-            alert("send successsfully..");
-            </script>
-            </body>
-            </html>
-            `);
             console.log("successfuly send mail");
         }
     })
