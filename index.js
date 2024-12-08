@@ -35,7 +35,7 @@ function mailfun(to,sub,msg){
     
     
 app.use(express.json());
-app.use(cors(coroption));
+// app.use(cors(coroption));
 
 app.get("/",(req,res)=>{
     res.json("home page");
