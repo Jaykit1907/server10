@@ -38,7 +38,7 @@ app.use(express.json());
 // app.use(cors(coroption));
 
 app.get("/",(req,res)=>{
-    res.json("home page");
+    res.send("welcome home page");
 });
 
 app.post("/sendmail",(req,res)=>{
