@@ -14,53 +14,53 @@ const app=express();
 
 
 
-const transport= nodeMailer.createTransport({
-    host:"smtp.gmail.com",
-    auth:{
-        user:"jaykitmaurya1907@gmail.com",
-        pass:process.env.MAIL_PASS
-    }
-})
+// const transport= nodeMailer.createTransport({
+//     host:"smtp.gmail.com",
+//     auth:{
+//         user:"jaykitmaurya1907@gmail.com",
+//         pass:process.env.MAIL_PASS
+//     }
+// })
 
-var mailoption={ }
-function mailfun(to,sub,msg){
-         mailoption={
-        from:"jaykitmaurya1907@gmail.com",
-        to:to,
-        subject:sub,
-        text:msg
+// var mailoption={ }
+// function mailfun(to,sub,msg){
+//          mailoption={
+//         from:"jaykitmaurya1907@gmail.com",
+//         to:to,
+//         subject:sub,
+//         text:msg
         
-    }
-}
+//     }
+// }
     
     
-app.use(express.json());
+// app.use(express.json());
 // app.use(cors(coroption));
 
 app.get("/",(req,res)=>{
     res.send("welcome home page");
 });
 
-app.post("/sendmail",(req,res)=>{
+// app.post("/sendmail",(req,res)=>{
 
 
-     mailfun( req.body.to , req.body.subject, req.body.message);
-     console.log(req.body.to +req.body.subject+ req.body.message)
+//      mailfun( req.body.to , req.body.subject, req.body.message);
+//      console.log(req.body.to +req.body.subject+ req.body.message)
 
-        transport.sendMail(mailoption,(err,data)=>{
-        if(err){
-            console.log("sending error");
-            console.log("error:"+err);
-        }
-        else{
+//         transport.sendMail(mailoption,(err,data)=>{
+//         if(err){
+//             console.log("sending error");
+//             console.log("error:"+err);
+//         }
+//         else{
            
-            console.log("successfuly send mail");
-        }
-    })
+//             console.log("successfuly send mail");
+//         }
+//     })
 
   
     
-});
+// });
 
 
 port=process.env.PORT || 4000;
